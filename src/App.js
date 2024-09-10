@@ -357,8 +357,8 @@
 //     correctAnswer: "A",
 //   },
 
-//    // Balanced and Unbalanced Forces
-//    {
+//   // Balanced and Unbalanced Forces
+//   {
 //     id: 31,
 //     question: "Which of the following is an example of balanced forces?",
 //     options: {
@@ -404,7 +404,8 @@
 //   },
 //   {
 //     id: 35,
-//     question: "If a box is pushed from both sides with equal force, what will happen?",
+//     question:
+//       "If a box is pushed from both sides with equal force, what will happen?",
 //     options: {
 //       A: "The box will not move",
 //       B: "The box will accelerate",
@@ -461,7 +462,8 @@
 //   },
 //   {
 //     id: 40,
-//     question: "A body remains at rest or in uniform motion unless acted upon by:",
+//     question:
+//       "A body remains at rest or in uniform motion unless acted upon by:",
 //     options: {
 //       A: "An unbalanced force",
 //       B: "Balanced forces",
@@ -474,7 +476,8 @@
 //   // Second Law of Motion (Numerical-based)
 //   {
 //     id: 41,
-//     question: "A 10 kg object is moving with a velocity of 5 m/s. What is its momentum?",
+//     question:
+//       "A 10 kg object is moving with a velocity of 5 m/s. What is its momentum?",
 //     options: {
 //       A: "50 kg m/s",
 //       B: "25 kg m/s",
@@ -485,7 +488,8 @@
 //   },
 //   {
 //     id: 42,
-//     question: "A 50 kg object experiences a force of 100 N. What is the acceleration of the object?",
+//     question:
+//       "A 50 kg object experiences a force of 100 N. What is the acceleration of the object?",
 //     options: {
 //       A: "2 m/s²",
 //       B: "4 m/s²",
@@ -496,7 +500,8 @@
 //   },
 //   {
 //     id: 43,
-//     question: "A force of 20 N is applied to a 4 kg object. What will be its acceleration?",
+//     question:
+//       "A force of 20 N is applied to a 4 kg object. What will be its acceleration?",
 //     options: {
 //       A: "5 m/s²",
 //       B: "2 m/s²",
@@ -507,7 +512,8 @@
 //   },
 //   {
 //     id: 44,
-//     question: "A car of mass 1000 kg increases its speed from 10 m/s to 20 m/s in 5 seconds. What is the net force applied on the car?",
+//     question:
+//       "A car of mass 1000 kg increases its speed from 10 m/s to 20 m/s in 5 seconds. What is the net force applied on the car?",
 //     options: {
 //       A: "2000 N",
 //       B: "5000 N",
@@ -518,7 +524,8 @@
 //   },
 //   {
 //     id: 45,
-//     question: "A 5 kg object accelerates at 4 m/s² under the action of a constant force. What is the magnitude of the force?",
+//     question:
+//       "A 5 kg object accelerates at 4 m/s² under the action of a constant force. What is the magnitude of the force?",
 //     options: {
 //       A: "20 N",
 //       B: "10 N",
@@ -542,7 +549,8 @@
 //   },
 //   {
 //     id: 47,
-//     question: "In a collision between two objects, the forces exerted by the two objects on each other are:",
+//     question:
+//       "In a collision between two objects, the forces exerted by the two objects on each other are:",
 //     options: {
 //       A: "Equal and opposite",
 //       B: "Unequal and in the same direction",
@@ -553,7 +561,8 @@
 //   },
 //   {
 //     id: 48,
-//     question: "A rocket moves forward due to the force of hot gases escaping from its rear. This is an example of:",
+//     question:
+//       "A rocket moves forward due to the force of hot gases escaping from its rear. This is an example of:",
 //     options: {
 //       A: "Newton's Third Law",
 //       B: "Newton's First Law",
@@ -564,7 +573,8 @@
 //   },
 //   {
 //     id: 49,
-//     question: "A ball is thrown at a wall and it bounces back. Which law is demonstrated here?",
+//     question:
+//       "A ball is thrown at a wall and it bounces back. Which law is demonstrated here?",
 //     options: {
 //       A: "Newton's Third Law",
 //       B: "Newton's First Law",
@@ -575,15 +585,16 @@
 //   },
 //   {
 //     id: 50,
-//     question: "When you push a wall, the wall pushes back with equal force. Which law explains this?",
+//     question:
+//       "When you push a wall, the wall pushes back with equal force. Which law explains this?",
 //     options: {
-//       A: "Newton’s Third Law",
-//       B: "Newton’s First Law",
-//       C: "Newton’s Second Law",
+//       A: "Newton's Third Law",
+//       B: "Newton's First Law",
+//       C: "Newton's Second Law",
 //       D: "Law of Conservation of Momentum",
 //     },
 //     correctAnswer: "A",
-//   }
+//   },
 // ];
 
 // const App = () => {
@@ -596,6 +607,7 @@
 //     marks: 0,
 //     percentage: 0,
 //   });
+//   const [viewAnswers, setViewAnswers] = useState(false);
 
 //   const handleChange = (index, value) => {
 //     const newAnswers = [...answers];
@@ -626,10 +638,12 @@
 //     setSubmitted(true);
 //   };
 
+//   const handleViewAnswers = () => {
+//     setViewAnswers(true);
+//   };
+
 //   return (
 //     <Box sx={{ p: { xs: 2, md: 4 } }}>
-//       {" "}
-//       {/* Padding adjusted for mobile */}
 //       {!submitted ? (
 //         <>
 //           {questions.map((q, index) => (
@@ -640,7 +654,7 @@
 //                 flexDirection: "column",
 //                 justifyContent: "left",
 //                 marginBottom: "20px",
-//                 p: { xs: 2, md: 3 }, // Adjust padding for smaller screens
+//                 p: { xs: 2, md: 3 },
 //               }}
 //             >
 //               <FormControl component="fieldset" sx={{ mb: 3 }}>
@@ -655,8 +669,6 @@
 //                   <Grid container spacing={2}>
 //                     {Object.entries(q.options).map(([key, value]) => (
 //                       <Grid item xs={12} sm={6} key={key}>
-//                         {" "}
-//                         {/* Full width on mobile, half width on larger screens */}
 //                         <FormControlLabel
 //                           value={key}
 //                           control={<Radio />}
@@ -673,7 +685,7 @@
 //             variant="contained"
 //             onClick={handleSubmit}
 //             sx={{
-//               width: { xs: "100%", md: "auto" }, // Full width button on mobile
+//               width: { xs: "100%", md: "auto" },
 //               mt: { xs: 2, md: 0 },
 //             }}
 //           >
@@ -690,6 +702,64 @@
 //             Marks Obtained: {result.marks} / {questions.length}
 //           </Typography>
 //           <Typography>Percentage: {result.percentage}%</Typography>
+//           <Button
+//             variant="contained"
+//             sx={{ mt: 3 }}
+//             onClick={handleViewAnswers}
+//           >
+//             View Answers
+//           </Button>
+//         </Box>
+//       )}
+
+//       {viewAnswers && (
+//         <Box sx={{ mt: 4 }}>
+//           {questions.map((q, index) => (
+//             <Stack
+//               key={q.id}
+//               sx={{
+//                 display: "flex",
+//                 flexDirection: "column",
+//                 justifyContent: "left",
+//                 marginBottom: "20px",
+//                 p: { xs: 2, md: 3 },
+//               }}
+//             >
+//               <FormControl component="fieldset" sx={{ mb: 3 }}>
+//                 <FormLabel component="legend">
+//                   {index + 1}. {q.question}
+//                 </FormLabel>
+//                 <RadioGroup name={`question-${q.id}`} value={answers[index]}>
+//                   <Grid container spacing={2}>
+//                     {Object.entries(q.options).map(([key, value]) => {
+//                       const isCorrect = key === q.correctAnswer;
+//                       const isUserAnswer = answers[index] === key;
+//                       const isIncorrect = isUserAnswer && !isCorrect;
+
+//                       return (
+//                         <Grid item xs={12} sm={6} key={key}>
+//                           <FormControlLabel
+//                             value={key}
+//                             control={<Radio />}
+//                             label={`${key}) ${value}`}
+//                             sx={{
+//                               backgroundColor: isCorrect
+//                                 ? "green"
+//                                 : isIncorrect
+//                                 ? "red"
+//                                 : "transparent",
+//                               color:
+//                                 isCorrect || isIncorrect ? "white" : "black",
+//                             }}
+//                           />
+//                         </Grid>
+//                       );
+//                     })}
+//                   </Grid>
+//                 </RadioGroup>
+//               </FormControl>
+//             </Stack>
+//           ))}
 //         </Box>
 //       )}
 //     </Box>
@@ -710,7 +780,9 @@ import {
   Typography,
   Grid,
   Stack,
+  TextField,
 } from "@mui/material";
+import emailjs from "emailjs-com"; // Import EmailJS
 
 const questions = [
   {
@@ -1296,8 +1368,10 @@ const questions = [
     correctAnswer: "A",
   },
 ];
-
 const App = () => {
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [submittedForm, setSubmittedForm] = useState(false);
   const [answers, setAnswers] = useState(Array(questions.length).fill(""));
   const [submitted, setSubmitted] = useState(false);
   const [result, setResult] = useState({
@@ -1308,6 +1382,14 @@ const App = () => {
     percentage: 0,
   });
   const [viewAnswers, setViewAnswers] = useState(false);
+
+  // Function to handle form submission for name and mobile number
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (name && mobile) {
+      setSubmittedForm(true); // Show the MCQ only if form is submitted
+    }
+  };
 
   const handleChange = (index, value) => {
     const newAnswers = [...answers];
@@ -1336,6 +1418,46 @@ const App = () => {
 
     setResult({ attended, skipped, incorrect, marks, percentage });
     setSubmitted(true);
+
+    // Send the result email
+    sendEmail(name, mobile, attended, skipped, incorrect, marks, percentage);
+  };
+
+  const sendEmail = (
+    name,
+    mobile,
+    attended,
+    skipped,
+    incorrect,
+    marks,
+    percentage
+  ) => {
+    // EmailJS email sending logic
+    const templateParams = {
+      user_name: name,
+      user_mobile: mobile,
+      attended_questions: attended,
+      skipped_questions: skipped,
+      incorrect_answers: incorrect,
+      total_marks: marks,
+      percentage: percentage,
+    };
+
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        templateParams,
+        "YOUR_USER_ID" // Replace with your EmailJS user ID
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
   };
 
   const handleViewAnswers = () => {
@@ -1344,7 +1466,30 @@ const App = () => {
 
   return (
     <Box sx={{ p: { xs: 2, md: 4 } }}>
-      {!submitted ? (
+      {!submittedForm ? (
+        // Form to get user's name and mobile number
+        <form onSubmit={handleFormSubmit}>
+          <Stack spacing={2} sx={{ maxWidth: 400, margin: "auto" }}>
+            <TextField
+              label="Name"
+              variant="outlined"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+            <TextField
+              label="Mobile Number"
+              variant="outlined"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+              required
+            />
+            <Button type="submit" variant="contained" color="primary">
+              Start Quiz
+            </Button>
+          </Stack>
+        </form>
+      ) : !submitted ? (
         <>
           {questions.map((q, index) => (
             <Stack
