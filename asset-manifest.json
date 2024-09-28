@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/novdayTest.git/static/css/main.e6c13ad2.css",
+    "main.js": "/novdayTest.git/static/js/main.be09770e.js",
+    "static/js/453.0be1713a.chunk.js": "/novdayTest.git/static/js/453.0be1713a.chunk.js",
+    "index.html": "/novdayTest.git/index.html",
+    "main.e6c13ad2.css.map": "/novdayTest.git/static/css/main.e6c13ad2.css.map",
+    "main.be09770e.js.map": "/novdayTest.git/static/js/main.be09770e.js.map",
+    "453.0be1713a.chunk.js.map": "/novdayTest.git/static/js/453.0be1713a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.be09770e.js"
+  ]
+}
